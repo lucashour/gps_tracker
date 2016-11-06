@@ -1,0 +1,21 @@
+/* HTML structure */
+#body-content {
+  padding-top: 3em;
+  padding-bottom: 2em;
+}
+
+body > footer {
+  background-color: white;
+  text-align: center;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* Texts */
+.text-white {
+  color: white;
+}
