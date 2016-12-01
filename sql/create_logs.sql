@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS taller_2.logs (
+  id INT NOT NULL AUTO_INCREMENT,
+  message TEXT,
+  PRIMARY KEY(id)
+);

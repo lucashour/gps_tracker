@@ -15,7 +15,7 @@
     <div id="body-content">
       <div class="container well">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-12 col-xs-12">
             <table class="table table-hover">
               <thead>
                 <tr>
@@ -34,6 +34,11 @@
                 <?php } ?>
               </tbody>
             </table>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-xs-12">
+            <div id="js-map"></div>
           </div>
         </div>
       </div>
