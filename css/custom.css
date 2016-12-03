@@ -1,21 +1,37 @@
-/* HTML structure */
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0px;
+}
+
+body > header > nav {
+  position: absolute;
+  width: 100%;
+  height: 2.5em;
+  background-color: #4B515D!important;
+  color: white;
+  padding-bottom: 1em;
+}
+
+body > footer {
+  position: absolute;
+  width: 30%;
+  height: 1.75em;
+  background-color: #4B515D!important;
+  color: white;
+  text-align: center;
+  bottom: 0.5em;
+  left: 35%;
+  border-radius: 25px;
+}
+
 #body-content {
   padding-top: 3em;
   padding-bottom: 2em;
 }
 
-body > footer {
-  background-color: white;
-  text-align: center;
-  padding-top: 0.8em;
-  padding-bottom: 0.8em;
-  position: relative;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-/* Map */
 #map {
   position: absolute;
   top: 3em;
@@ -27,8 +43,8 @@ body > footer {
 .statistics-panel {
   position: absolute;
   top: 10em;
-  left: 0em;
-  width: 17%;
+  left: 0.5em;
+  width: 15%;
 }
 
 .statistics-panel-header {
@@ -42,15 +58,16 @@ body > footer {
   border: none;
   outline: none;
   transition: 0.4s;
+  border-radius: 25px 25px 0px 0px;
 }
 
 .statistics-panel-body {
   background-color: white!important;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+  border-radius: 0px 0px 25px 25px;
 }
 
-/* Texts */
 .text-white {
   color: white;
 }
@@ -61,4 +78,8 @@ body > footer {
 
 .text-bold {
   font-weight: bold;
+}
+
+.padding-top-min {
+  padding-top: 0.5em;
 }

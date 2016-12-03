@@ -4,13 +4,13 @@ ini_set('display_errors', 'on');
 
 $header =
   '<!--HEADER -->
-  <nav class="navbar stylish-color">
-  <div class="container-fluid">
-  <div class="navbar-header">
-  <span class="navbar-brand waves-effect waves-light text-white">Sistema de trackeo GPS</a>
-  </div>
-  </div>
+
+  <header>
+  <nav>
+    <h3 style="padding-left: 1em;" class="text-center">Sistema de Trackeo GPS</h3>
   </nav>
+  </header>
+
   <!--FIN del HEADER -->';
 
 echo $header;

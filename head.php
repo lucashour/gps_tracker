@@ -9,19 +9,15 @@ echo
 <meta name="description" content="Sitio web de comercio electrónico">
 <meta name="author" content="Alián, Julián - Hourquebie, Lucas">
 <!--Hojas de estilo CSS-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/mdb.min.css" rel="stylesheet">
 <link href="css/custom.css" rel="stylesheet">
 <!-- fin hojas de estilo CSS-->
 <!--Scripts JS-->
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-<script type="text/javascript" src="js/tether.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/mdb.min.js"></script>
-<script type="text/javascript" src="js/init.js"></script>
 <script type="text/javascript" src="js/google_maps.js"></script>
 <!--fin scripts JS-->
+<!-- Fuentes -->
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<!-- fin fuentes -->
 </head>
 '
 ?>

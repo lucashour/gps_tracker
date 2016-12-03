@@ -3,7 +3,7 @@
   '<!--FOOTER -->
 
   <footer class="page-footer">
-  <b>Ailán, Julián - Hourquebie, Lucas</b>
+  <div style="padding-top: 0.25em;">Ailán, Julián - Hourquebie, Lucas</div>
   </footer>
 
   <!--FIN del FOOTER -->';

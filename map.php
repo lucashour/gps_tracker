@@ -12,9 +12,9 @@
       <?php include_once("header.php"); ?>
 
       <div id="body-content">
-        <div id="container">
-          <div id="map"></div>
-        </div>
+
+        <div id="map"></div>
+
         <div class="statistics-panel text-center">
           <div class="statistics-panel-header">
              Estadísticas
@@ -24,22 +24,24 @@
               Fecha
             </div>
             <div id="js-date"></div>
-            <div class="text-bold">
+            <div class="text-bold padding-top-min">
               Distancia recorrida
             </div>
             <div id="js-distance" data-distance_in_mts="">
             </div>
-            <div class="text-bold">
+            <div class="text-bold padding-top-min">
               Tiempo transcurrido
             </div>
             <div id="js-time" data-time_in_secs=""></div>
-            <div class="text-bold">
+            <div class="text-bold padding-top-min">
               Velocidad promedio
             </div>
-            <div id="js-speed"></div>
+            <div id="js-speed" class="padding-top-min"></div>
           </div>
         </div>
       </div>
+
+    <?php include_once("footer.php"); ?>
 
     </body>
 </html>
