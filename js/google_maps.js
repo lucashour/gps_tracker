@@ -36,6 +36,7 @@ function initMap() {
           }
         }
 
+        setDateData(locations[0].registered_at)
         setDistanceData(distance);
         setTimeData(start, end);
         setSpeedData(distance, start, end);
@@ -71,4 +72,9 @@ function setSpeedData(distance, start, end){
   hs = Math.abs(start - end) / (1000 * 3600);
   speed = Math.round(100 * km / hs) / 100;
   $('#js-speed').text(speed + " km/h");
+}
+
+function setDateData(datetime){
+  date = datetime.substr(0, 10);
+  $('#js-date').text(date);
 }

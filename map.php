@@ -21,23 +21,22 @@
           </div>
           <div class="statistics-panel-body">
             <div class="text-bold">
+              Fecha
+            </div>
+            <div id="js-date"></div>
+            <div class="text-bold">
               Distancia recorrida
             </div>
             <div id="js-distance" data-distance_in_mts="">
-              ---
             </div>
             <div class="text-bold">
               Tiempo transcurrido
             </div>
-            <div id="js-time" data-time_in_secs="">
-              ---
-            </div>
+            <div id="js-time" data-time_in_secs=""></div>
             <div class="text-bold">
               Velocidad promedio
             </div>
-            <div id="js-speed">
-              ---
-            </div>
+            <div id="js-speed"></div>
           </div>
         </div>
       </div>
