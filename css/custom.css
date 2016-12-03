@@ -24,7 +24,41 @@ body > footer {
   left: 0;
 }
 
+.statistics-panel {
+  position: absolute;
+  top: 10em;
+  left: 0em;
+  width: 17%;
+}
+
+.statistics-panel-header {
+  background-color: #4B515D!important;
+  color: white;
+  font-weight: bold;
+  text-align: center!important;
+  cursor: pointer;
+  padding: 18px;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.statistics-panel-body {
+  background-color: white!important;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
 /* Texts */
 .text-white {
   color: white;
+}
+
+.text-center {
+  text-align: center!important;
+}
+
+.text-bold {
+  font-weight: bold;
 }
