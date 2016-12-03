@@ -36,7 +36,7 @@
             <div class="text-bold padding-top-min">
               Velocidad promedio
             </div>
-            <div id="js-speed" class="padding-top-min"></div>
+            <div id="js-speed" class="padding-bottom-min"></div>
           </div>
         </div>
       </div>
