@@ -37,9 +37,22 @@ class Position {
     return $result;
   }
 
+  public static function destroy_all(){
+    include_once("connection.php");
+    $connection = connect_to_database();
+    $query = "DELETE FROM `positions`";
+    $result = mysqli_query($connection, $query);
+    mysqli_close($connection);
+    return $result;
+  }
+
   private static function set_datetime($time){
     date_default_timezone_set('America/Argentina/Buenos_Aires');
-    $datetime = date('Y-m-d') . " " . $time;
+    $hours = substr($time, 0, 2);
+    $hours = ((int) $hours) - 3;
+    $minutes = substr($time, 2, 2);
+    $seconds = substr($time, 4, 2);
+    $datetime = date('Y-m-d') . " " . $hours . ":" . $minutes . ":" . $seconds;
     return $datetime;
   }
 

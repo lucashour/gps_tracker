@@ -21,8 +21,6 @@ echo
 <script type="text/javascript" src="js/mdb.min.js"></script>
 <script type="text/javascript" src="js/init.js"></script>
 <script type="text/javascript" src="js/google_maps.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBW89n8V96AGfSADrAUYKMWVu8UgetW2Jo&callback=initMap"
-    async defer></script>
 <!--fin scripts JS-->
 </head>
 '
