@@ -35,7 +35,7 @@
             <div class="text-bold">
               Velocidad promedio
             </div>
-            <div class="">
+            <div id="js-speed">
               ---
             </div>
           </div>

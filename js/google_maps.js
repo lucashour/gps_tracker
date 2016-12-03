@@ -36,16 +36,39 @@ function initMap() {
           }
         }
 
-        /* Distancia */
-        $('#js-distance').data('distance_in_mts', distance);
-        $('#js-distance').text((Math.round(distance*100) / 100).toString() + " mts");
-
-        /* Tiempo */
-        seconds = Math.abs(start - end) / (1000);
-        $('#js-time').data('time_in_secs', seconds);
-        $('#js-time').text((Math.round(seconds*100/60)/100).toString() + " minutos");
+        setDistanceData(distance);
+        setTimeData(start, end);
+        setSpeedData(distance, start, end);
 
       }
     }
   });
+}
+
+function setDistanceData(distance){
+  $('#js-distance').data('distance_in_mts', distance);
+  distance_in_mts = (Math.round(distance * 100) / 100).toString();
+  $('#js-distance').text(distance_in_mts + " mts");
+}
+
+function setTimeData(start, end){
+  ms = Math.abs(start - end);
+  x = ms / 1000;
+  seconds = Math.round(x % 60).toString();
+  if (seconds.length < 2) { seconds = "0" + seconds; }
+  x /= 60;
+  minutes = Math.round(x % 60).toString();
+  if (minutes.length < 2) { minutes = "0" + minutes; }
+  x /= 60;
+  hours = Math.round(x % 24).toString();
+  if (hours.length == 1) { hours = "0" + hours; }
+  $('#js-time').data('time_in_secs', ms / 1000);
+  $('#js-time').text(hours + " h " + minutes + " min " + seconds + " seg");
+}
+
+function setSpeedData(distance, start, end){
+  km = distance / 1000;
+  hs = Math.abs(start - end) / (1000 * 3600);
+  speed = Math.round(100 * km / hs) / 100;
+  $('#js-speed').text(speed + " km/h");
 }
