@@ -6,7 +6,7 @@ echo
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Sitio web de comercio electrónico">
+<meta name="description" content="Sistema de trackeo GPS desarrollado para la cátedra Taller de Proyecto 2 de la Universidad Nacional de La Plata, de la carrera Ingeniería en Computación">
 <meta name="author" content="Alián, Julián - Hourquebie, Lucas">
 <!--Hojas de estilo CSS-->
 <link href="css/custom.css" rel="stylesheet">
