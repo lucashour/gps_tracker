@@ -50,6 +50,7 @@ class Position {
     date_default_timezone_set('America/Argentina/Buenos_Aires');
     $hours = substr($time, 0, 2);
     $hours = ((int) $hours) - 3;
+    if ((int)$hours < 0) { $hours = (int)$hours + 24; }
     $minutes = substr($time, 2, 2);
     $seconds = substr($time, 4, 2);
     $datetime = date('Y-m-d') . " " . $hours . ":" . $minutes . ":" . $seconds;
