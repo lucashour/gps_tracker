@@ -3,48 +3,45 @@
 
   <?php include_once("head.php"); ?>
 
-  <body>
+    <?php include_once("position_class.php"); ?>
 
-    <?php include_once("header.php"); ?>
-    <?php
-      include_once("position_class.php");
-      $positions = Position::all();
-    ?>
+    <body>
 
-    <!-- CUERPO -->
-    <div id="body-content">
-      <div class="container well">
-        <div class="row">
-          <div class="col-md-12 col-xs-12">
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th width="33%">Latitud</th>
-                  <th width="33%">Longitud</th>
-                  <th width="33%">Fecha y hora</th>
-                </tr>
-              </thead>
-              <tbody>
-                <?php while ($row = mysqli_fetch_array($positions)) { ?>
-                  <tr>
-                    <td><?php echo $row['latitude']; ?></td>
-                    <td><?php echo $row['longitude']; ?></td>
-                    <td><?php echo $row['registered_at']; ?></td>
-                  </tr>
-                <?php } ?>
-              </tbody>
-            </table>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXg61_WRZBet7yTi_x1z8RRDtWJUNYZ90&callback=initMap&libraries=geometry" async defer></script>
+
+      <?php include_once("header.php"); ?>
+
+      <div id="body-content">
+
+        <div id="map"></div>
+
+        <div class="statistics-panel text-center">
+          <div class="statistics-panel-header">
+             Estadísticas
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 col-xs-12">
-            <div id="js-map"></div>
+          <div class="statistics-panel-body">
+            <div class="text-bold">
+              Fecha
+            </div>
+            <div id="js-date"></div>
+            <div class="text-bold padding-top-min">
+              Distancia recorrida
+            </div>
+            <div id="js-distance" data-distance_in_mts="">
+            </div>
+            <div class="text-bold padding-top-min">
+              Tiempo transcurrido
+            </div>
+            <div id="js-time" data-time_in_secs=""></div>
+            <div class="text-bold padding-top-min">
+              Velocidad promedio
+            </div>
+            <div id="js-speed" class="padding-top-min"></div>
           </div>
         </div>
       </div>
-    </div>
 
     <?php include_once("footer.php"); ?>
 
-  </body>
+    </body>
 </html>
