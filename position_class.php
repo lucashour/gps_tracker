@@ -48,12 +48,19 @@ class Position {
 
   private static function set_datetime($time){
     date_default_timezone_set('America/Argentina/Buenos_Aires');
+
     $hours = substr($time, 0, 2);
     $hours = ((int) $hours) - 3;
     if ((int)$hours < 0) { $hours = (int)$hours + 24; }
     $minutes = substr($time, 2, 2);
     $seconds = substr($time, 4, 2);
-    $datetime = date('Y-m-d') . " " . $hours . ":" . $minutes . ":" . $seconds;
+
+    $date = new DateTime();
+    $server_hours = (int)$date->format('H');
+    // Si la hora del servidor es mayor, decrementar la fecha en un día
+    if ((int) $hours > $server_hours) { $date->modify('-1 days'); }
+
+    $datetime = $date->format('Y-m-d') . " " . $hours . ":" . $minutes . ":" . $seconds;
     return $datetime;
   }
 
