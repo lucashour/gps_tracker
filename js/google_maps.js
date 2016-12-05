@@ -31,7 +31,7 @@ function initMap() {
           })(marker, i));
 
           if (i > 0){
-            previous_position = new google.maps.LatLng(locations[0].latitude, locations[0].longitude);
+            previous_position = new google.maps.LatLng(locations[i - 1].latitude, locations[i - 1].longitude);
             distance += google.maps.geometry.spherical.computeDistanceBetween (previous_position, marker.position);
           }
         }
