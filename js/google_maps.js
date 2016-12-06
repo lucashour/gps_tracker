@@ -17,10 +17,12 @@ function initMap() {
 
         var infowindow = new google.maps.InfoWindow();
         var marker, i;
+        var route = [];
 
         for (i = 0; i < locations.length; i++) {
           marker = new google.maps.Marker({
             position: new google.maps.LatLng(locations[i].latitude, locations[i].longitude),
+            icon: 'images/marker_icon.png',
             map: map
           });
           google.maps.event.addListener(marker, 'click', (function(marker, i) {
@@ -30,11 +32,22 @@ function initMap() {
             }
           })(marker, i));
 
+          route.push(marker.position);
+
           if (i > 0){
             previous_position = new google.maps.LatLng(locations[i - 1].latitude, locations[i - 1].longitude);
             distance += google.maps.geometry.spherical.computeDistanceBetween (previous_position, marker.position);
           }
         }
+
+        var polyline = new google.maps.Polyline({
+          path: route,
+          map: map,
+          strokeColor: '#ff0000',
+          strokeWeight: 5,
+          strokeOpacity: 0.3,
+          clickable: false
+        });
 
         setDateData(locations[0].registered_at)
         setDistanceData(distance);
